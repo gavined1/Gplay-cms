@@ -3,7 +3,7 @@
         {% if carousel.imageCarouselMobile %}
             {% for item in carousel.imageCarouselMobile %}
                 <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
-                    <img src="{{ item.path }}" class="d-block w-100​​" alt="{{ item.Title }}"></div>
+                    <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
                 {% endfor %}
             {% endif %}
         </div>
