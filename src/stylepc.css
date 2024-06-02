@@ -1,0 +1,86 @@
+.pc-ver {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.form-control {
+  color: #fff !important;
+  width: 150px !important;
+  background-color: #fffdfd8c !important;
+}
+.login-btn-pc {
+  color: #fff !important;
+  background: rgb(133, 86, 9);
+  background: linear-gradient(
+    0deg,
+    rgba(133, 86, 9, 1) 0%,
+    rgba(186, 150, 17, 1) 100%
+  );
+}
+.register-btn-pc {
+  color: #fff !important;
+  background: rgb(80, 6, 6);
+  background: linear-gradient(0deg, rgb(80, 6, 6) 0%, rgb(133, 15, 15) 100%);
+}
+.marqueeContainerPc {
+  background-color: #774242;
+  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
+}
+.headerpc {
+  background-color: #350606;
+}
+.pc-ver h1 {
+  color: #ffffff;
+}
+.pc-ver p {
+  color: #eca5a5;
+}
+/* pc ver */
+.nav-pc {
+  background: #00000067;
+  height: 50px;
+}
+.pc-menu {
+  color: #fff !important;
+}
+.pc-icon {
+  height: 30px;
+}
+.pc-menu.active {
+  color: #ffffff !important;
+  background: rgb(53, 6, 6);
+  background: linear-gradient(180deg, rgb(53, 6, 6) 0%, rgb(255, 0, 0) 100%);
+}
+.vl {
+  border-left: 2px solid #ffffff;
+}
+.promo-pc img {
+  width: 50vw;
+  border-radius: 10px;
+}
+.register a {
+  font-size: 12px;
+}
+.line {
+  height: 20px;
+  width: 1px;
+  background-color: white;
+}
+.icon-footer img {
+  margin-right: 8px;
+}
+#pc-menu-bg {
+  background-color: #00000067;
+}
+#gameProvider img {
+  margin: 5px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+#gameProvider img:hover {
+  filter: grayscale(0%);
+}

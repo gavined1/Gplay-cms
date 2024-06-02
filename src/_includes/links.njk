@@ -1,0 +1,6 @@
+{% if social_media_links.social_media_links %}
+    {% for item in social_media_links.social_media_links %}
+        <a href="{{ item.link }}" target="_blank">
+            <img src="{{ item.icon }}" alt="{{ item.platform }}" style="height: 35px"></a>
+        {% endfor %}
+    {% endif %}

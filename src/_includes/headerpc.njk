@@ -1,0 +1,27 @@
+<header class="headerpc d-block">
+  <div class="container-fluid">
+    <div class="container d-flex justify-content-between ">
+      <div class="logo">
+        <a class="navbar-brand" href="/">
+          <img src="{{ logo.path }}" alt="{{ logo.title }}" height="60" class="d-inline-block align-top"/>
+        </a>
+      </div>
+      <div class="form">
+        <form role="search">
+          <div class="container">
+            <div class="input-group p-4">
+              <div class="input-group hstack gap-2">
+                <input type="text" class="form-control rounded-3" placeholder="Username" aria-label="Recipient's username">
+                <input type="number" class="form-control rounded-3" placeholder="Password" aria-label="Recipient's password">
+                <div class="vr"></div>
+                <a class="btn rounded-3 login-btn-pc" type="button" href="{{ linkbutton.link }}">ចូល</a>
+                <a class="btn rounded-3 register-btn-pc" type="button" href="{{ linkbutton.link }}">ចុះឈ្មោះ</a>
+                <a href="{{ linkbutton.link }}">ភ្លេចលេខសម្ងាត់?</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>

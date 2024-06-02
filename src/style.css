@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #450303 !important;
+  font-family: "Battambang", system-ui !important;
+}
+.nav-mobile {
+  background: linear-gradient(0deg, #410202 0%, #7c0404 100%);
+}
+.marqueeContainer {
+  background-color: #774242 !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.offcanvas {
+  background-color: rgba(46, 45, 45, 0.9) !important;
+}
+.menu-item {
+  color: #fff;
+  align-items: center;
+  text-align: center;
+}
+.menu-item i {
+  color: #b9842e;
+}
+.nav-pill {
+  width: 6em;
+  height: 3em;
+  font-size: 12px !important;
+  text-align: center;
+  padding: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #774242 !important;
+  color: #fff !important;
+}
+.signup-btn {
+  background: rgb(133, 86, 9);
+  background: linear-gradient(
+    0deg,
+    rgba(133, 86, 9, 1) 0%,
+    rgba(186, 150, 17, 1) 100%
+  );
+}
+.register-btn {
+  background: rgb(80, 6, 6);
+  background: linear-gradient(0deg, rgb(80, 6, 6) 0%, rgb(133, 15, 15) 100%);
+}
+/* Adjust styles for larger screens */
+@media (min-width: 576px) {
+  .nav-pill {
+    width: 8em;
+    height: 8em;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-pill {
+    width: 10em;
+    height: 10em;
+  }
+}
+.nav-pill.active {
+  background: rgb(80, 6, 6);
+  background: linear-gradient(0deg, rgb(80, 6, 6) 0%, rgb(133, 15, 15) 100%);
+}
+#custom-slider-container-1 {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 100vw;
+  height: 16vh;
+  position: relative;
+}
+#custom-slider-container-2 {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 100vw;
+  height: 22vh;
+  position: relative;
+}
+
+#custom-slider-wrapper-1,
+#custom-slider-wrapper-2 {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.custom-slide {
+  width: 55vw; /* Make each slide fill the container */
+  height: 10vh;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+
+.custom-slide img {
+  width: 100%;
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the slide area */
+  border-radius: 8px; /* Adds rounded corners to the image */
+}
+
+#custom-dots-container-1,
+#custom-dots-container-2 {
+  right: 10px;
+  z-index: 2;
+}
+
+.custom-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.custom-dot.active {
+  background-color: #deaf08;
+}
+.text-header-slide {
+  font-size: 14px;
+  color: #deaf08;
+  margin-left: 10px;
+}
+/* Bottom nav */
+.bottom-navbar {
+  display: flex;
+  justify-content: space-evenly; /* Distribute items evenly */
+  align-items: center; /* Center items vertically */
+  overflow: hidden;
+  background: #1c0202;
+  background: linear-gradient(0deg, #000000 0%, #7c0404 100%);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-navbar a {
+  color: #ddd;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 8px;
+}
+.bottom-navbar i {
+  color: #ffd000;
+  font-size: 16px;
+}
+.cock-img img {
+  overflow: hidden;
+  width: 30vw;
+  max-width: 100vw;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.casino-img img {
+  overflow: hidden;
+  width: 30vw;
+  max-width: 100vw;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.sport-img img {
+  overflow: hidden;
+  width: 30vw;
+  max-width: 100vw;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.slot-img img {
+  overflow: hidden;
+  width: 30vw;
+  max-width: 100vw;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.fishing-img img {
+  overflow: hidden;
+  width: 30vw;
+  max-width: 100vw;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.keno-img img {
+  overflow: hidden;
+  width: 30vw;
+  max-width: 100vw;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.footer-img img {
+  overflow: hidden;
+  width: 25vw;
+  max-width: 100vw;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.card-body-mobile {
+  background-color: #534b4b4d !important;
+  color: #fff !important;
+}
+#card-body-about {
+  background-color: #201e1ece !important;
+  color: #fff !important;
+}
+#card-body-social {
+  background-color: #201e1ece !important;
+}
+#card-body-banks {
+  background-color: #201e1ece !important;
+  color: #fff !important;
+}
+.card-body-partner​​ {
+  background-color: #201e1ece !important;
+}
+.fa {
+  font-size: 10px;
+}
+.badge {
+  background-color: red;
+}
+#modal {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}

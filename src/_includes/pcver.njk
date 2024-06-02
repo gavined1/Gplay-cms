@@ -1,0 +1,358 @@
+{% include 'headerpc.njk' %}
+<nav>
+  <div class="nav nav-tabs d-flex justify-content-center nav-pc" id="nav-tab" role="tablist">
+    <button
+      class="nav-link pc-menu active"
+      id="nav-home-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-home"
+      type="button"
+      role="tab"
+      aria-controls="nav-home"
+      aria-selected="true">
+      <img class="pc-icon" src="assets/icons/nav-home.png"/> ទំព័រដើម
+    </button>
+    <div class="vl"></div>
+    <button
+      class="nav-link pc-menu"
+      id="nav-sport-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-sport"
+      type="button"
+      role="tab"
+      aria-controls="nav-sport"
+      aria-selected="false">
+      <img class="pc-icon" src="assets/icons/nav-sport.png"/> កីឡា
+    </button>
+    <div class="vl"></div>
+    <button
+      class="nav-link pc-menu"
+      id="nav-cock-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-cock"
+      type="button"
+      role="tab"
+      aria-controls="nav-cock"
+      aria-selected="false">
+      <img class="pc-icon" src="assets/icons/nav-more.png"/> មាន់ជល់
+    </button>
+    <div class="vl"></div>
+    <button
+      class="nav-link pc-menu"
+      id="nav-casino-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-casino"
+      type="button"
+      role="tab"
+      aria-controls="nav-casino"
+      aria-selected="false">
+      <img class="pc-icon" src="assets/icons/nav-casino.png"/> កាស៊ីណូ
+    </button>
+    <div class="vl"></div>
+    <button
+      class="nav-link pc-menu"
+      id="nav-slot-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-slot"
+      type="button"
+      role="tab"
+      aria-controls="nav-slot"
+      aria-selected="false">
+      <img class="pc-icon" src="assets/icons/nav-slots.png"/> ស្លុត
+    </button>
+    <div class="vl"></div>
+    <button
+      class="nav-link pc-menu"
+      id="nav-fishing-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-fishing"
+      type="button"
+      role="tab"
+      aria-controls="nav-fishing"
+      aria-selected="false">
+      <img class="pc-icon" src="assets/icons/nav-fish.png"/> បាញ់ត្រី
+    </button>
+    <div class="vl"></div>
+    <button
+      class="nav-link pc-menu"
+      id="nav-keno-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-keno"
+      type="button"
+      role="tab"
+      aria-controls="nav-keno"
+      aria-selected="false">
+      <img class="pc-icon" src="assets/icons/nav-keno.png"/> គីណូ
+    </button>
+    <div class="vl"></div>
+    <button
+      class="nav-link pc-menu"
+      id="nav-promo-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-promo"
+      type="button"
+      role="tab"
+      aria-controls="nav-promo"
+      aria-selected="false">
+      <img class="pc-icon" src="assets/icons/nav-promotion.png"/> ប្រម៉ូហ្សិន
+    </button>
+  </div>
+</nav>
+<div
+  class="tab-content" id="nav-tabContent">
+  <!-- home -->
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+    {% include 'carouselpc.njk' %}
+    {% include 'marqueepc.njk' %}
+    <div class="container-fluid p-2" id="pc-menu-bg">
+      <div class="container-sm pc-menu2 d-flex justify-content-between text-white">
+        <div class="menu-pc">
+          <a class="nav-link" href="{{ linkbutton.link }}" rel="noopener noreferrer">
+            <button type="button" class="btn">
+              <i class="fa-solid fa-right-to-bracket fa-2xl" style="color: #fbff00"></i>
+            </button>
+            ចូលលេង <br/> ចុះឈ្មោះបង្កើតអាខោន
+          </a>
+        </div>
+        <div class="vl"></div>
+        <div class="menu-pc">
+          <a class="nav-link" href="{{ linkbutton.link }}" rel="noopener noreferrer">
+            <button type="button" class="btn">
+              <i class="fa-solid fa-wallet fa-2xl" style="color: #fbff00"></i>
+            </button>
+            ដាក់ប្រាក់<br/>ជ្រើសរើសមធ្យោបាយទូទាត់
+          </a>
+        </div>
+        <div class="vl"></div>
+        <div class="menu-pc">
+          <button type="button" class="btn">
+            <i class="fa-solid fa-arrows-spin fa-2xl" style="color: #fbff00"></i>
+          </button>
+          ផ្ទេរប្រាក់<br/>ផ្ទេរប្រាក់ទៅកាបូបហ្គេមផ្សេង
+        </div>
+        <div class="vl"></div>
+        <div class="menu-pc">
+          <button type="button" class="btn">
+            <i class="fa-solid fa-money-bill fa-2xl" style="color: #fbff00"></i>
+          </button>
+          ដកប្រាក់<br/>ដកប្រាក់ឈ្នះរបស់អ្នក
+        </div>
+      </div>
+    </div>
+    <!-- Home -->
+    <div id="carousel-home-bottom" class="carousel slide container-sm mt-5 mb-3" data-bs-ride="carousel">
+      <div class="carousel-inner rounded-5">
+        {% if carouselpcbottom.carouselpcbottom %}
+          {% for item in carouselpcbottom.carouselpcbottom %}
+            <div class="carousel-item {% if loop.index == 1 %}active{% endif %}" data-bs-interval="20000">
+              <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <!-- sport -->
+    <div class="tab-pane fade" id="nav-sport" role="tabpanel" aria-labelledby="nav-sport-tab" tabindex="0">
+      <div class="nav-sport">
+        <img src="{{ imagesportpc.coversportpc }}" class="w-100"/>
+      </div>
+      <div class="container mt-5">
+        <div class="sport">
+          <div class="img-sport row row-cols-6">
+            {% if imagesportpc.imagesportpc %}
+              {% for item in imagesportpc.imagesportpc %}
+                <div class="sport-img col d-flex justify-content-center {% if loop.index == 1 %}{% endif %}">
+                  <img src="{{ item.path }}" class="rounded-4" alt="{{ item.Title }}"></div>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- cock -->
+      <div class="tab-pane fade" id="nav-cock" role="tabpanel" aria-labelledby="nav-cock-tab" tabindex="0">
+        <div class="nav-sport">
+          <img src="{{ imagecockpc.covercockpc }}" class="w-100"/>
+        </div>
+        <div class="container mt-5">
+          <div class="cock">
+            <div class="img-cock row row-cols-6">
+              {% if imagecockpc.imagecockpc %}
+                {% for item in imagecockpc.imagecockpc %}
+                  <div class="cock-img col d-flex justify-content-center {% if loop.index == 1 %}{% endif %}">
+                    <img src="{{ item.path }}" class="rounded-4" alt="{{ item.Title }}"></div>
+                  {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- casino -->
+        <div class="tab-pane fade" id="nav-casino" role="tabpanel" aria-labelledby="nav-casino-tab" tabindex="0">
+          <div class="nav-sport">
+            <img src="{{ imagecasinopc.covercasinopc }}" class="w-100"/>
+          </div>
+          <div class="container mt-5">
+            <div class="casino">
+              <div class="img-casino row row-cols-6">
+                {% if imagecasinopc.imagecasinopc %}
+                  {% for item in imagecasinopc.imagecasinopc %}
+                    <div class="casino-img col d-flex justify-content-center {% if loop.index == 1 %}{% endif %}">
+                      <img src="{{ item.path }}" class="rounded-4" alt="{{ item.Title }}"></div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slot -->
+          <div class="tab-pane fade" id="nav-slot" role="tabpanel" aria-labelledby="nav-slot-tab" tabindex="0">
+            <div class="nav-slot">
+              <img src="{{ imageslotpc.coverslotpc }}" class="w-100"/>
+            </div>
+            <div class="container mt-5">
+              <div class="slot">
+                <div class="slot-cock row row-cols-6">
+                  {% if imageslotpc.imageslotpc %}
+                    {% for item in imageslotpc.imageslotpc %}
+                      <div class="slot-img col d-flex justify-content-center {% if loop.index == 1 %}{% endif %}">
+                        <img src="{{ item.path }}" class="rounded-4" alt="{{ item.Title }}"></div>
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fishing -->
+            <div class="tab-pane fade" id="nav-fishing" role="tabpanel" aria-labelledby="nav-fishing-tab" tabindex="0">
+              <div class="nav-fishing">
+                <img src="{{ imagefishingpc.coverfishingpc }}" class="w-100"/>
+              </div>
+              <div class="container mt-5">
+                <div class="fishing">
+                  <div class="img-cock row row-cols-6">
+                    {% if imagefishingpc.imagefishingpc %}
+                      {% for item in imagefishingpc.imagefishingpc %}
+                        <div class="fishing-img col d-flex justify-content-center {% if loop.index == 1 %}{% endif %}">
+                          <img src="{{ item.path }}" class="rounded-4" alt="{{ item.Title }}"></div>
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Keno -->
+              <div class="tab-pane fade" id="nav-keno" role="tabpanel" aria-labelledby="nav-keno-tab" tabindex="0">
+                <div class="nav-keno">
+                  <img src="{{ imagekenopc.coverkenopc }}" class="w-100"/>
+                </div>
+                <div class="container mt-5">
+                  <div class="keno">
+                    <div class="img-keno row row-cols-6">
+                      {% if imagekenopc.imagekenopc %}
+                        {% for item in imagekenopc.imagekenopc %}
+                          <div class="keno-img col d-flex justify-content-center {% if loop.index == 1 %}{% endif %}">
+                            <img src="{{ item.path }}" class="rounded-4" alt="{{ item.Title }}"></div>
+                          {% endfor %}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- promotion -->
+                <div class="tab-pane fade mb-3" id="nav-promo" role="tabpanel" aria-labelledby="nav-promo-tab" tabindex="0">
+                  <div class="nav-keno">
+                    <img src="{{ imagepropc.coverpropc }}" class="w-100"/>
+                  </div>
+                  <div class="container-fluid mt-5 promo-pc">
+                    <div class="row row-cols-1 gap-4 d-flex justify-content-center">
+                      {% if imagepropc.imagepropc %}
+                        {% for item in imagepropc.imagepropc %}
+                          <div class="pro-img col {% if loop.index == 1 %}{% endif %}" data-bs-toggle="collapse" href="#{{ item.key }}" role="button" aria-expanded="false" aria-controls="{{ item.key }}">
+                            <img src="{{ item.path }}" class="rounded-4 mx-auto d-block">
+                              <div class="collapse container" id="{{ item.key }}">
+                                <div class="card card-body card-body-pc p-2​">
+                                  <div class="richtext">{{ item.description | safe }}</div>
+                                </div>
+                              </div>
+                            </div>
+                          {% endfor %}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <hr style="color: #fff; margin: 0;"/>
+                  <div class="container">
+                    <br/>
+                    <!-- Nav pills -->
+                    <ul class="nav d-flex justify-content-center align-items-center" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#home">អំពី {{ web.name }}
+                        </a>
+                      </li>
+                      <div class="line"></div>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#menu1">ដៃគូរសហការផ្ទេរប្រាក់
+                        </a>
+                      </li>
+                      <div class="line"></div>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#menu2">ប្រព័ន្ធផ្សព្វផ្សាយសង្គម
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content text-white">
+                      <div id="home" class="container tab-pane">
+                        <br/>
+                        <h3>អំពី {{ web.name }}</h3>
+                        <div class="richtext">
+                          {{ about.title | safe }}
+                        </div>
+                      </div>
+                      <div id="menu1" class="container tab-pane fade">
+                        <br/>
+                        <h3>ធនាគារ</h3>
+                        <div class="richtext">
+                          {{ banks.title | safe }}
+                        </div>
+                      </div>
+                      <div id="menu2" class="container tab-pane fade">
+                        <br/>
+                        <h3>ប្រព័ន្ធផ្សព្វផ្សាយសង្គម</h3>
+                        <div class="icon-footer">
+                          <div class="d-flex rounded-3">
+                            {% if social_media_links.social_media_links %}
+                              {% for item in social_media_links.social_media_links %}
+                                <a href="{{ item.link }}" target="_blank">
+                                  <img src="{{ item.icon }}" alt="{{ item.platform }}" style="height: 35px" class="rounded-3"></a>
+                                {% endfor %}
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr style="color: #fff;"/>
+                  </div>
+                  <div class="container mt-3 mb-3" id="containerGameProvider">
+                    <div class="container d-block gap-2 text-white" id="gameProvider">
+                      <h6 class="my-3">ដៃគូរសហការរវាងវេបសាយធំៗ</h6>
+                      {% if partner.partner %}
+                        {% for item in partner.partner %}
+                          <img src="{{ item.path }}" alt="{{ item.title }}" style="height: 35px">
+                          {% endfor %}
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="container">
+                      <div class="container d-flex justify-content-center align-items-center">
+                        <p style="color: gray; font-size: 14px">
+                          Copy right {{ web.name }} @2020. All rights reserved.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>

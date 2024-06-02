@@ -1,0 +1,273 @@
+<div id="content2" class="container mt-3">
+  <div class="d-flex align-items-start">
+    <div class="scrollable-container w-25" style="height: 45vh; overflow-y: auto">
+      <div class="nav flex-column nav-pills gap-2 w-25" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button
+          class="nav-link nav-pill active"
+          id="v-pills-1-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-1"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-1"
+          aria-selected="true">
+          ទំព័រដើម
+        </button>
+        <button
+          class="nav-link nav-pill"
+          id="v-pills-2-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-2"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-2"
+          aria-selected="false">
+          កីឡា
+        </button>
+        <button
+          class="nav-link nav-pill"
+          id="v-pills-3-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-3"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-3"
+          aria-selected="false">
+          មាន់ជល់
+        </button>
+        <button
+          class="nav-link nav-pill"
+          id="v-pills-4-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-4"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-4"
+          aria-selected="false">
+          កាស៊ីណូ
+        </button>
+        <button
+          class="nav-link nav-pill"
+          id="v-pills-5-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-5"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-5"
+          aria-selected="false">
+          ស្លុត
+        </button>
+        <button
+          class="nav-link nav-pill"
+          id="v-pills-6-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-6"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-6"
+          aria-selected="false">
+          បាញ់ត្រី
+        </button>
+        <button
+          class="nav-link nav-pill"
+          id="v-pills-8-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-8"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-8"
+          aria-selected="false">
+          គីណូ
+        </button>
+        <button
+          class="nav-link nav-pill"
+          id="v-pills-7-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#v-pills-7"
+          type="button"
+          role="tab"
+          aria-controls="v-pills-7"
+          aria-selected="false">
+          ប្រម៉ូហ្សិន
+        </button>
+      </div>
+    </div>
+    <div class="tab-content d-flex overflow-hidden w-75 d-flex" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+        <div class="slide">
+          <div class="slide1">
+            <div class="header-slide d-flex justify-content-between mt-1" style="width: 70vw">
+              <div id="custom-header-1">
+                <div class="text-header-slide text-white">
+                  {{ header1.header1 }}
+                </div>
+              </div>
+              <div
+                id="custom-dots-container-1"><!-- Dots or content on the right -->
+              </div>
+            </div>
+            <div id="custom-slider-container-1" class="container-fluid">
+              <div id="custom-slider-wrapper-1" onClick="telegramLink()">
+                {% if imageslide.imageslide1 %}
+                  {% for item in imageslide.imageslide1 %}
+                    <div class="custom-slide {% if loop.index == 1 %}active{% endif %}">
+                      <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            <!-- Duplicated Slider -->
+            <div class="slide2 mt-2">
+              <div class="header-slide d-flex justify-content-between" style="width: 70vw">
+                <div id="custom-header-2">
+                  <div class="my-1 text-header-slide text-white">
+                    {{ header2.header2 }}
+                  </div>
+                </div>
+                <div
+                  id="custom-dots-container-2"><!-- Dots or content on the right -->
+                </div>
+              </div>
+              <div id="custom-slider-container-2" class="container-fluid">
+                <div id="custom-slider-wrapper-2" onClick="youtubeLink()">
+                  {% if imageslide2.imageslide2 %}
+                    {% for item in imageslide2.imageslide2 %}
+                      <div class="custom-slide {% if loop.index == 1 %}active{% endif %}">
+                        <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+            <div class="sport">
+              <div class="my-1 text-header-slide text-white">{{ imagesport.headersport }}</div>
+              <div class="sport">
+                <div class="img-cock row row-cols-3" onClick="telegramLink()">
+                  {% if imagesport.imagesport %}
+                    {% for item in imagesport.imagesport %}
+                      <div class="sport-img col {% if loop.index == 1 %}active{% endif %}">
+                        <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+              <div class="my-1 text-header-slide text-white">{{ imagecock.headercock }}</div>
+              <div class="cock-fight">
+                <div class="img-cock row row-cols-3">
+                  {% if imagecock.imagecock %}
+                    {% for item in imagecock.imagecock %}
+                      <div class="cock-img col {% if loop.index == 1 %}active{% endif %}">
+                        <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+                <div class="my-1 text-header-slide text-white">{{ imagecasino.headercasino }}</div>
+                <div class="casino">
+                  <div class="img-casino row row-cols-3" onClick="telegramLink()">
+                    {% if imagecasino.imagecasino %}
+                      {% for item in imagecasino.imagecasino %}
+                        <div class="casino-img col {% if loop.index == 1 %}active{% endif %}">
+                          <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
+                  <div class="my-1 text-header-slide text-white">{{ imageslot.headerslot }}</div>
+                  <div class="slot">
+                    <div class="img-slot row row-cols-3" onClick="telegramLink()">
+                      {% if imageslot.imageslot %}
+                        {% for item in imageslot.imageslot %}
+                          <div class="slot-img col {% if loop.index == 1 %}active{% endif %}">
+                            <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                          {% endfor %}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-6-tab">
+                    <div class="my-1 text-header-slide text-white">
+                      {{ imagefishing.headerfishing }}
+                    </div>
+                    <div class="fishing">
+                      <div class="img-fishing row row-cols-3" onClick="telegramLink()">
+                        {% if imagefishing.imagefishing %}
+                          {% for item in imagefishing.imagefishing %}
+                            <div class="fishing-img col {% if loop.index == 1 %}active{% endif %}">
+                              <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                            {% endfor %}
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-8" role="tabpanel" aria-labelledby="v-pills-8-tab">
+                      <div class="my-1 text-header-slide text-white">
+                        {{ imagekeno.headerkeno }}
+                      </div>
+                      <div class="keno">
+                        <div class="img-keno row row-cols-3" onClick="telegramLink()">
+                          {% if imagekeno.imagekeno %}
+                            {% for item in imagekeno.imagekeno %}
+                              <div class="keno-img col {% if loop.index == 1 %}active{% endif %}">
+                                <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                              {% endfor %}
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-7-tab">
+                        <div class="my-1 text-header-slide text-white">
+                          {{ imagepro.headerpro }}
+                        </div>
+                        <div class="pro">
+                          <div class="img-pro row row-cols-1 gap-3">
+                            {% if imagepro.imagepro %}
+                              {% for item in imagepro.imagepro %}
+                                <div class="pro-img col" data-bs-toggle="collapse" href="#{{ item.key }}" role="button" aria-expanded="false" aria-controls="{{ item.key }}">
+                                  <img src="{{ item.path }}" class="d-block w-100 rounded-4">
+                                    <div class="collapse" id="{{ item.key }}">
+                                      <div class="card card-body card-body-mobile p-2​​​">
+                                        <div class="richtext">{{ item.description | safe }}</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                {% endfor %}
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- content bottom -->
+                <div class="container mb-5 mt-3 d-block d-sm-none">
+                  <div class="my-1 text-header-slide text-white">{{ headerbottom.header3 }}</div>
+                  <div id="carouselMobileBottom" class="carousel slide pointer-event" data-bs-ride="carousel">
+                    <div class="carousel-inner p-2" id="carouselInner">
+                      {% if slide.slide %}
+                        {% for chunk in slide.slide|batch(4) %}
+                          <div class="carousel-item {% if loop.first %}active{% endif %}">
+                            <div class="row row-cols-4">
+                              {% for item in chunk %}
+                                <div class="col footer-img">
+                                  <img src="{{ item.path }}" class="d-block w-100" alt="{{ item.Title }}"></div>
+                                {% endfor %}
+                              </div>
+                            </div>
+                          {% endfor %}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>

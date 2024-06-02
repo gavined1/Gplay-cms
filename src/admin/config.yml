@@ -1,0 +1,554 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "social_media"
+    label: "Social Media"
+    files:
+      - name: "social_media"
+        file: "src/_data/social_media_links.yaml"
+        label: "All Social Media"
+        fields:
+          - label: "Social Media"
+            name: "social_media_links"
+            widget: "list"
+            fields:
+              - label: "Link"
+                name: "link"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "image"
+  - label: "Settings"
+    name: "imagefavicon"
+    files:
+      - name: "src/_data/web.yaml"
+        file: "src/_data/web.yaml"
+        label: "Name of your Website"
+        fields:
+          - label: "Name"
+            name: "name"
+            widget: "string"
+      - name: "src/_data/favicon.yaml"
+        file: "src/_data/favicon.yaml"
+        label: "Favicon Image"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Image"
+            name: "path"
+            widget: "image"
+      - name: "src/_data/logo.yaml"
+        file: "src/_data/logo.yaml"
+        label: "Logo Image"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Image"
+            name: "path"
+            widget: "image"
+      - name: "src/_data/descriptionweb.yaml"
+        file: "src/_data/descriptionweb.yaml"
+        label: "Description for website"
+        fields:
+          - label: "Your description"
+            name: "text"
+            widget: "string"
+      - name: "src/_data/keywords.yaml"
+        file: "src/_data/keywords.yaml"
+        label: "Keywords for Website"
+        fields:
+          - label: "Keywors"
+            name: "text"
+            widget: "string"
+
+      - name: "src/_data/about.yaml"
+        file: "src/_data/about.yaml"
+        label: "About"
+        fields:
+          - label: "About"
+            name: "title"
+            widget: "markdown"
+      - name: "src/_data/banks.yaml"
+        file: "src/_data/banks.yaml"
+        label: "Banks"
+        fields:
+          - label: "Banks"
+            name: "title"
+            widget: "markdown"
+      - name: "src/_data/partner.yaml"
+        file: "src/_data/partner.yaml"
+        label: "Partner"
+        fields:
+          - label: "Add Partner"
+            name: "partner"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+      - name: "src/_data/linkbutton.yaml"
+        file: "src/_data/linkbutton.yaml"
+        label: "Link for button"
+        fields:
+          - label: "Link"
+            name: "link"
+            widget: "string"
+      - name: "number"
+        file: "src/_data/number.yaml"
+        label: "Phone Number"
+        fields:
+          - label: "Icon for Number"
+            name: "icon"
+            widget: "image"
+            fields:
+              - label: "Icon"
+                name: "icon"
+                widget: "image"
+          - label: "Phone Number"
+            name: "number"
+            widget: "list"
+            fields:
+              - label: "Phone number"
+                name: "phonenum"
+                widget: "string"
+      - name: "contact"
+        file: "src/_data/contact.yaml"
+        label: "Contact Me"
+        fields:
+          - label: "Header Contact"
+            name: "title"
+            widget: "string"
+            fields:
+              - label: "title"
+                name: "title"
+                widget: "string"
+          - label: "Link and Icon"
+            name: "contact"
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Link"
+                name: "link"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "image"
+  - label: "Carousel"
+    name: "imageCarouselMobile"
+    files:
+      - name: "src/_data/carousel.yaml"
+        file: "src/_data/carousel.yaml"
+        label: "Carousel Phone"
+        fields:
+          - label: "Add New Carousel"
+            name: "imageCarouselMobile"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+      - name: "src/_data/carouselpc.yaml"
+        file: "src/_data/carouselpc.yaml"
+        label: "Carousel PC"
+        fields:
+          - label: "Add New Carousel"
+            name: "imageCarouselPc"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+      - name: "src/_data/carouselpcbottom.yaml"
+        file: "src/_data/carouselpcbottom.yaml"
+        label: "Carousel PC Bottom"
+        fields:
+          - label: "Add New Carousel"
+            name: "carouselpcbottom"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+  - label: "Marquee Text"
+    name: "marqueeText"
+    files:
+      - name: "src/_data/marquee.yaml"
+        file: "src/_data/marquee.yaml"
+        label: "Marquee Text"
+        fields:
+          - label: "Text"
+            name: "text"
+            widget: "string"
+          - label: "Icon"
+            name: "path"
+            widget: "image"
+
+  - label: "Slide"
+    name: "slide_collection"
+    files:
+      - name: "src/_data/header1.yaml"
+        file: "src/_data/header1.yaml"
+        label: "Header Slide 1"
+        fields:
+          - label: "Header"
+            name: "header1"
+            widget: "string"
+      - name: "src/_data/imageslide.yaml"
+        file: "src/_data/imageslide.yaml"
+        label: "Slide 1"
+        fields:
+          - label: "Add New Slide"
+            name: "imageslide1"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+      - name: "src/_data/header2.yaml"
+        file: "src/_data/header2.yaml"
+        label: "Header Slide 2"
+        fields:
+          - label: "Header"
+            name: "header2"
+            widget: "string"
+      - name: "src/_data/imageslide2.yaml"
+        file: "src/_data/imageslide2.yaml"
+        label: "Slide 2"
+        fields:
+          - label: "Add New Slide"
+            name: "imageslide2"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+      - name: "src/_data/headerbottom.yaml"
+        file: "src/_data/headerbottom.yaml"
+        label: "Header Slide Bottom"
+        fields:
+          - label: "Header"
+            name: "header3"
+            widget: "string"
+      - name: "src/_data/slide.yaml"
+        file: "src/_data/slide.yaml"
+        label: "Slide Bottom"
+        fields:
+          - label: "Add New Slide"
+            name: "slide"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+  - label: "Games and Promotions (Mobile)"
+    name: "game_collection"
+    files:
+      - label: "Sport"
+        name: "imagesport"
+        file: "src/_data/imagesport.yaml"
+        fields:
+          - label: "Header Sport"
+            name: "headersport"
+            widget: "string"
+            fields:
+              - label: "Header"
+                name: "text"
+                widget: "string"
+          - label: "Add image"
+            name: "imagesport"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Cock Fight"
+        name: "imagecock"
+        file: "src/_data/imagecock.yaml"
+        fields:
+          - label: "Header Cock"
+            name: "headercock"
+            widget: "string"
+            fields:
+              - label: "Header"
+                name: "text"
+                widget: "string"
+          - label: "Add image"
+            name: "imagecock"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Casino"
+        name: "imagecasino"
+        file: "src/_data/imagecasino.yaml"
+        fields:
+          - label: "Header Casino"
+            name: "headercasino"
+            widget: "string"
+            fields:
+              - label: "Header"
+                name: "text"
+                widget: "string"
+          - label: "Add image"
+            name: "imagecasino"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Slot"
+        name: "imageslot"
+        file: "src/_data/imageslot.yaml"
+        fields:
+          - label: "Header Slot"
+            name: "headerslot"
+            widget: "string"
+            fields:
+              - label: "Header"
+                name: "text"
+                widget: "string"
+          - label: "Add image"
+            name: "imageslot"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Fishing"
+        name: "imagefishing"
+        file: "src/_data/imagefishing.yaml"
+        fields:
+          - label: "Header Fishing"
+            name: "headerfishing"
+            widget: "string"
+            fields:
+              - label: "Header"
+                name: "text"
+                widget: "string"
+          - label: "Add image"
+            name: "imagefishing"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Keno"
+        name: "imagekeno"
+        file: "src/_data/imagekeno.yaml"
+        fields:
+          - label: "Header Keno"
+            name: "headerkeno"
+            widget: "string"
+            fields:
+              - label: "Header"
+                name: "text"
+                widget: "string"
+          - label: "Add image"
+            name: "imagekeno"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Promotion"
+        name: "imagepro"
+        file: "src/_data/imagepro.yaml"
+        fields:
+          - label: "Header Promotion"
+            name: "headerpro"
+            widget: "string"
+            fields:
+              - label: "Header"
+                name: "text"
+                widget: "string"
+          - label: "Add image"
+            name: "imagepro"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Key"
+                name: "key"
+                widget: "string"
+              - label: "Image"
+                name: "path"
+                widget: "image"
+              - label: "Description"
+                name: "description"
+                widget: "markdown"
+  - label: "Games and Promotions (PC)"
+    name: "game_collection_pc"
+    files:
+      - label: "Sport"
+        name: "imagesportpc"
+        file: "src/_data/imagesportpc.yaml"
+        fields:
+          - label: "Cover Sport"
+            name: "coversportpc"
+            widget: "image"
+            fields:
+              - label: "Cover"
+                name: "path"
+                widget: "image"
+          - label: "Add image"
+            name: "imagesportpc"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Cock Fight"
+        name: "imagecockpc"
+        file: "src/_data/imagecockpc.yaml"
+        fields:
+          - label: "Cover Cock"
+            name: "covercockpc"
+            widget: "image"
+            fields:
+              - label: "Cover"
+                name: "path"
+                widget: "image"
+          - label: "Add image"
+            name: "imagecockpc"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Casino"
+        name: "imagecasinopc"
+        file: "src/_data/imagecasinopc.yaml"
+        fields:
+          - label: "Cover Casino"
+            name: "covercasinopc"
+            widget: "image"
+            fields:
+              - label: "Cover"
+                name: "path"
+                widget: "image"
+          - label: "Add image"
+            name: "imagecasinopc"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Slot"
+        name: "imageslotpc"
+        file: "src/_data/imageslotpc.yaml"
+        fields:
+          - label: "Cover Slot"
+            name: "coverslotpc"
+            widget: "image"
+            fields:
+              - label: "Cover"
+                name: "path"
+                widget: "image"
+          - label: "Add image"
+            name: "imageslotpc"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Fishing"
+        name: "imagefishingpc"
+        file: "src/_data/imagefishingpc.yaml"
+        fields:
+          - label: "Cover Fishing"
+            name: "coverfishingpc"
+            widget: "image"
+            fields:
+              - label: "Cover"
+                name: "path"
+                widget: "image"
+          - label: "Add image"
+            name: "imagefishingpc"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Keno"
+        name: "imagekenopc"
+        file: "src/_data/imagekenopc.yaml"
+        fields:
+          - label: "Cover Keno"
+            name: "coverkenopc"
+            widget: "image"
+            fields:
+              - label: "Cover"
+                name: "path"
+                widget: "image"
+          - label: "Add image"
+            name: "imagekenopc"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Image"
+                name: "path"
+                widget: "image"
+
+      - label: "Promotion"
+        name: "imagepropc"
+        file: "src/_data/imagepropc.yaml"
+        fields:
+          - label: "Cover Promotion"
+            name: "coverpropc"
+            widget: "image"
+            fields:
+              - label: "Cover"
+                name: "path"
+                widget: "image"
+          - label: "Add image"
+            name: "imagepropc"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Key"
+                name: "key"
+                widget: "string"
+              - label: "Image"
+                name: "path"
+                widget: "image"
+              - label: "Description"
+                name: "description"
+                widget: "markdown"

@@ -1,0 +1,39 @@
+---
+title: Name | គេហទំព័រល្បែងកំសាន្តឈានមុខគេ
+layout: "base.njk"
+---
+
+<main id="pc" class="d-none d-sm-block">
+  {% include 'pcver.njk' %}
+</main>
+<main id="mobile" class="d-block d-sm-none">
+  {% include 'modal.njk' %}
+  {% include 'offcanvas.njk' %}
+  <div class="body-content d-block d-sm-none">
+    {% include 'carousel.njk' %}
+  </div>
+  <div class="container-fluid d-flex">
+    {% include 'marquee.njk' %}
+  </div>
+  <div class="container">
+    <div class="register d-flex justify-content-around">
+      <a href="{{ linkbutton.link }}" type="button" class="btn log-in w-50 text-white signup-btn">ចូល</a>
+      <div style="width: 15px;"></div>
+      <a href="{{ linkbutton.link }}" type="button" class="btn sign-up w-50 text-white register-btn">ចុះឈ្មោះ</a>
+    </div>
+  </div>
+  {% include 'gamelist.njk' %}
+</main>
+<!-- bottom nav -->
+<div class="nav bottom-navbar d-flex d-sm-none">
+  <a href="/" class="nav-link">
+    <i class="fa fa-home"></i><br/>ទំព័រដើម</a>
+  <a href="{{ linkbutton.link }}" class="nav-link">
+    <i class="fa fa-dollar"></i><br/>ដាក់ប្រាក់</a>
+  <a href="{{ linkbutton.link }}" class="nav-link">
+    <i class="fa fa-clipboard"></i><br/>ដកប្រាក់</a>
+  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">
+    <i class="fa-solid fa-message"></i><br/>ទំនាក់ទំនង</a>
+  <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <i class="fa fa-bars"></i><br/>ការកំណត់</a>
+</div></div>
