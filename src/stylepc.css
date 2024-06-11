@@ -84,3 +84,6 @@
 #gameProvider img:hover {
   filter: grayscale(0%);
 }
+.card-body-pc {
+  background-color: transparent !important;
+}

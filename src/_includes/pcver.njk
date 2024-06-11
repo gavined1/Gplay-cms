@@ -271,8 +271,8 @@
                           <div class="pro-img col {% if loop.index == 1 %}{% endif %}" data-bs-toggle="collapse" href="#{{ item.key }}" role="button" aria-expanded="false" aria-controls="{{ item.key }}">
                             <img src="{{ item.path }}" class="rounded-4 mx-auto d-block">
                               <div class="collapse container" id="{{ item.key }}">
-                                <div class="card card-body card-body-pc p-2​">
-                                  <div class="richtext">{{ item.description | safe }}</div>
+                                <div class="card card-body card-body-pc container w-75 p-2​">
+                                  <div class="richtext text-white">{{ item.description | safe }}</div>
                                 </div>
                               </div>
                             </div>
