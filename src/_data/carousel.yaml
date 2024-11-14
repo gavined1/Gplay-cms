@@ -1,8 +1,8 @@
 imageCarouselMobile:
-  - path: /assets/images/home-1.jpg
-  - path: /assets/images/baner-casino.jpg
-  - path: /assets/images/baner-cock.jpg
-  - path: /assets/images/baner-sports.jpg
-  - path: /assets/images/baner-slots.jpg
-  - path: /assets/images/baner-fish.jpg
-  - path: /assets/images/baner-keno.jpg
+  - path: /assets/images/home-1.webp
+  - path: /assets/images/baner-casino.webp
+  - path: /assets/images/baner-cock.webp
+  - path: /assets/images/baner-sports.webp
+  - path: /assets/images/baner-slots.webp
+  - path: /assets/images/baner-fish.webp
+  - path: /assets/images/baner-keno.webp
