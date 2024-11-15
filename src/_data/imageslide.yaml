@@ -1,5 +1,5 @@
 imageslide1:
   - path: /assets/images/sliderhome4.webp
-  - path: /assets/images/sliderhome1.webp
-  - path: /assets/images/sliderhome2.webp
   - path: /assets/images/sliderhome3.webp
+  - path: /assets/images/sliderhome2.webp
+  - path: /assets/images/sliderhome1.webp
