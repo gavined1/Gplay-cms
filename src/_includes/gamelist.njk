@@ -146,7 +146,7 @@
             <div class="sport">
               <div class="my-1 text-header-slide text-white">{{ imagesport.headersport }}</div>
               <div class="sport">
-                <div class="img-cock row row-cols-3" onClick="telegramLink()">
+                <div class="img-cock row row-cols-3 p-2" onClick="telegramLink()">
                   {% if imagesport.imagesport %}
                     {% for item in imagesport.imagesport %}
                       <div class="sport-img col {% if loop.index == 1 %}active{% endif %}">
@@ -160,7 +160,7 @@
             <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
               <div class="my-1 text-header-slide text-white">{{ imagecock.headercock }}</div>
               <div class="cock-fight">
-                <div class="img-cock row row-cols-3">
+                <div class="img-cock row row-cols-3 p-2">
                   {% if imagecock.imagecock %}
                     {% for item in imagecock.imagecock %}
                       <div class="cock-img col {% if loop.index == 1 %}active{% endif %}">
@@ -173,7 +173,7 @@
               <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
                 <div class="my-1 text-header-slide text-white">{{ imagecasino.headercasino }}</div>
                 <div class="casino">
-                  <div class="img-casino row row-cols-3" onClick="telegramLink()">
+                  <div class="img-casino row row-cols-3 p-2" onClick="telegramLink()">
                     {% if imagecasino.imagecasino %}
                       {% for item in imagecasino.imagecasino %}
                         <div class="casino-img col {% if loop.index == 1 %}active{% endif %}">
@@ -186,7 +186,7 @@
                 <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
                   <div class="my-1 text-header-slide text-white">{{ imageslot.headerslot }}</div>
                   <div class="slot">
-                    <div class="img-slot row row-cols-3" onClick="telegramLink()">
+                    <div class="img-slot row row-cols-3 p-2" onClick="telegramLink()">
                       {% if imageslot.imageslot %}
                         {% for item in imageslot.imageslot %}
                           <div class="slot-img col {% if loop.index == 1 %}active{% endif %}">
@@ -201,7 +201,7 @@
                       {{ imagefishing.headerfishing }}
                     </div>
                     <div class="fishing">
-                      <div class="img-fishing row row-cols-3" onClick="telegramLink()">
+                      <div class="img-fishing row row-cols-3 p-2" onClick="telegramLink()">
                         {% if imagefishing.imagefishing %}
                           {% for item in imagefishing.imagefishing %}
                             <div class="fishing-img col {% if loop.index == 1 %}active{% endif %}">
@@ -216,7 +216,7 @@
                         {{ imagekeno.headerkeno }}
                       </div>
                       <div class="keno">
-                        <div class="img-keno row row-cols-3" onClick="telegramLink()">
+                        <div class="img-keno row row-cols-3 p-2" onClick="telegramLink()">
                           {% if imagekeno.imagekeno %}
                             {% for item in imagekeno.imagekeno %}
                               <div class="keno-img col {% if loop.index == 1 %}active{% endif %}">
@@ -231,7 +231,7 @@
                           {{ imagepro.headerpro }}
                         </div>
                         <div class="pro">
-                          <div class="img-pro row row-cols-1 gap-3">
+                          <div class="img-pro row row-cols-1 gap-3 p-1">
                             {% if imagepro.imagepro %}
                               {% for item in imagepro.imagepro %}
                                 <div class="pro-img col" data-bs-toggle="collapse" href="#{{ item.key }}" role="button" aria-expanded="false" aria-controls="{{ item.key }}">
