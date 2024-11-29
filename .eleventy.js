@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/assets');
     eleventyConfig.addPassthroughCopy('./src/_data');
     eleventyConfig.addPassthroughCopy('./src/admin');
-    eleventyConfig.addPassthroughCopy('./src/sw.js');
+    eleventyConfig.addPassthroughCopy('./src/OneSignalSDKWorker.js');
 
     // Add custom filter for array chunking
     eleventyConfig.addFilter("arrayChunk", function (arr, size) {
