@@ -20,19 +20,21 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"/>
     <link rel="icon" type="image/x-icon" href="{{ favicon.path }}"/>
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(async function (OneSignal) {
-        await OneSignal.init({
-          appId: "58d7a5f9-b543-4fe2-a21e-e72303f1a5ae",
-          safari_web_id: "web.onesignal.auto.1d9d9717-02c9-46fa-a0ca-aedc9bb61733",
-          notifyButton: {
-            enable: true
-          }
-        });
-      });
+      (function (d, t) {
+        var BASE_URL = "https://chat.gplay9151.com";
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src = BASE_URL + "/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g, s);
+        g.onload = function () {
+          window.chatwootSDK.run({websiteToken: 'JiJ7XX6eg96dmZPzSnHP3bR8', baseUrl: BASE_URL})
+        }
+      })(document, "script");
     </script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
@@ -56,20 +58,6 @@
           }
         });
       }
-    </script>
-    <script>
-      (function (d, t) {
-        var BASE_URL = "https://chat.gplay9151.com";
-        var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-        g.src = BASE_URL + "/packs/js/sdk.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g, s);
-        g.onload = function () {
-          window.chatwootSDK.run({websiteToken: 'JiJ7XX6eg96dmZPzSnHP3bR8', baseUrl: BASE_URL})
-        }
-      })(document, "script");
     </script>
     <script src="/index.js"></script>
   </body>
