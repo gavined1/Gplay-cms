@@ -57,36 +57,20 @@
         });
       }
     </script>
-    <!-- Begin of Chaport Live Chat code -->
-    <script type="text/javascript">
-      (function (w, d, v3) {
-        w.chaportConfig = {
-          appId: '673608e0b86fcfa0a98a70cb'
-        };
-        if (w.chaport) 
-          return;
-        
-        v3 = w.chaport = {};
-        v3._q = [];
-        v3._l = {};
-        v3.q = function () {
-          v3._q.push(arguments)
-        };
-        v3.on = function (e, fn) {
-          if (! v3._l[e]) 
-            v3._l[e] = [];
-          
-          v3._l[e].push(fn)
-        };
-        var s = d.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'https://app.chaport.com/javascripts/insert.js';
-        var ss = d.getElementsByTagName('script')[0];
-        ss.parentNode.insertBefore(s, ss)
-      })(window, document);
+    <script>
+      (function (d, t) {
+        var BASE_URL = "https://chat.gplay9151.com";
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src = BASE_URL + "/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g, s);
+        g.onload = function () {
+          window.chatwootSDK.run({websiteToken: 'JiJ7XX6eg96dmZPzSnHP3bR8', baseUrl: BASE_URL})
+        }
+      })(document, "script");
     </script>
-    <!-- End of Chaport Live Chat code -->
     <script src="/index.js"></script>
   </body>
 </html>
